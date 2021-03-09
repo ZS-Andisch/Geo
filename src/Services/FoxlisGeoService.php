@@ -105,12 +105,12 @@ class FoxlisGeoService
 
     private function getVisitorIp()
     {
-        $isFakeIp = isset($this->developmentOptions['foxlis_geo_field_development_fake_ip_enable'])
+        $isFakeIp = isset($this->options['foxlis_geo_field_development_fake_ip_enable'])
             ? $this->options['foxlis_geo_field_development_fake_ip_enable']
             : '';
 
         if ($isFakeIp) {
-            return isset($this->developmentOptions['foxlis_geo_field_development_fake_ip'])
+            return isset($this->options['foxlis_geo_field_development_fake_ip'])
                 ? $this->options['foxlis_geo_field_development_fake_ip']
                 : '';
         }
