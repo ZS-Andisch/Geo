@@ -2,6 +2,7 @@
     "name": "foxliscom/geo",
     "description": "Get user location by IP using Foxlis Geo API",
     "type": "library",
+    "license": "MIT",
     "authors": [
         {
             "name": "Alexander Sorokin",
