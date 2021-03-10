@@ -1,7 +1,7 @@
 {
     "name": "foxliscom/geo",
     "description": "Get user location by IP using Foxlis Geo API",
-    "type": "library",
+    "type": "composer-plugin",
     "license": "MIT",
     "authors": [
         {
@@ -23,6 +23,9 @@
         }
     },
     "extra": {
+        "class": {
+            "class": "Foxliscom\\Geo"
+        },
         "params": {
             "foxlis_geo_field_session": true,
             "foxlis_geo_field_bot_filter": true,
