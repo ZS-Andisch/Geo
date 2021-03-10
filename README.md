@@ -42,6 +42,34 @@ echo $locationData->getTimeZone();
 FoxlisGeo::account()->getData();
 ```
 
+Multilanguage example:
+
+```php
+// Russian
+echo FoxlisGeo::location()->getCity()->ru;
+
+// Spanish
+echo FoxlisGeo::location()->getCity()->es;
+
+// English
+echo FoxlisGeo::location()->getCity()->en;
+
+// German
+echo FoxlisGeo::location()->getCity()->de;
+
+// French
+echo FoxlisGeo::location()->getCity()->fr;
+
+// Japanese
+echo FoxlisGeo::location()->getCity()->ja;
+
+// Portuguese
+echo FoxlisGeo::location()->getCity()->ptBR;
+
+// Chinese
+echo FoxlisGeo::location()->getCity()->zhCN;
+```
+
 ## Configuration
 
 Declare a global function `getFoxlisGeoConfig` with params like in common config `src/Config/common.php`:
