@@ -19,7 +19,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Foxliscom\\Geo": "/src"
+            "Foxliscom\\Geo\\": "/src"
         }
     },
     "extra": {
