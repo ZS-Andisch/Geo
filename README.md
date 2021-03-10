@@ -54,7 +54,15 @@ function getFoxlisGeoConfig()
     ];
 }
 ```
-
+* foxlis_geo_field_language `default en`.
+    * English `en`
+    * Chinese `zh-CN`
+    * French `fr`
+    * Russian `ru`
+    * German `de`
+    * Spanish `es`
+    * Japanese `ja`
+    * Portuguese `pt-BR`
 * foxlis_geo_field_session - save result to user session `default true`.
 * foxlis_geo_field_bot_filter - don't detect geo-location for bots `default true`.
 * foxlis_geo_field_protocol - protocol "http" or "https" `default "http"`.

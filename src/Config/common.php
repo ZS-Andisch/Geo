@@ -5,6 +5,7 @@ if (!function_exists('getFoxlisGeoConfig_default')) {
     {
         return [
             // Main Settings
+            'foxlis_geo_field_language' => 'en',
             'foxlis_geo_field_session' => true,
             'foxlis_geo_field_bot_filter' => true,
             'foxlis_geo_field_protocol' => 'http',
