@@ -1,8 +1,8 @@
 <?php
 
-namespace Foxlis\Geo\Factories;
+namespace Foxliscom\Geo\Factories;
 
-use Foxlis\Geo\Entities\FoxlisGeo;
+use Foxliscom\Geo\Entities\FoxlisGeo;
 
 class FoxlisGeoFactory
 {

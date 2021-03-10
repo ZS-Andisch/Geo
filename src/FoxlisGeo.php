@@ -1,12 +1,12 @@
 <?php
 
-namespace Foxlis\Geo;
+namespace Foxliscom\Geo;
 
 use Composer\Composer;
 use Composer\IO\IOInterface;
 use Composer\Plugin\PluginInterface;
 
-use Foxlis\Geo\Services\FoxlisGeoService;
+use Foxliscom\Geo\Services\FoxlisGeoService;
 
 class FoxlisGeo implements PluginInterface
 {

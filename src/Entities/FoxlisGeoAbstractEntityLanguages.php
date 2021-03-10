@@ -1,6 +1,6 @@
 <?php
 
-namespace Foxlis\Geo\Entities;
+namespace Foxliscom\Geo\Entities;
 
 /**
  * show off @method

@@ -1,9 +1,9 @@
 <?php
 
-namespace Foxlis\Geo\Services;
+namespace Foxliscom\Geo\Services;
 
-use Foxlis\Geo\Factories\FoxlisGeoAccountFactory;
-use Foxlis\Geo\Factories\FoxlisGeoFactory;
+use Foxliscom\Geo\Factories\FoxlisGeoAccountFactory;
+use Foxliscom\Geo\Factories\FoxlisGeoFactory;
 
 class FoxlisGeoService
 {
