@@ -2,16 +2,10 @@
 
 namespace Foxliscom\Geo;
 
-use Composer\Composer;
-use Composer\IO\IOInterface;
-use Composer\Plugin\PluginInterface;
-
 use Foxliscom\Geo\Services\FoxlisGeoService;
 
-class FoxlisGeo implements PluginInterface
+class FoxlisGeo
 {
-    private static $extra = [];
-
     public static function location()
     {
         return self::getService()->getFoxlisGeo();
@@ -27,24 +21,22 @@ class FoxlisGeo implements PluginInterface
         static $foxlisGeoService;
 
         if (empty($foxlisGeoService)) {
-            $foxlisGeoService = new FoxlisGeoService(
-                self::$extra['params']
-            );
+            $foxlisGeoService = new FoxlisGeoService(self::getConfig());
         }
 
         return $foxlisGeoService;
     }
 
-    public function activate(Composer $composer, IOInterface $io)
+    private static function getConfig()
     {
-        self::$extra = $composer->getPackage()->getExtra();
-    }
+        if (!function_exists('getFoxlisGeoConfig_default')) {
+            throw new \Exception('Foxlis Geo Plugin: config not found');
+        }
 
-    public function deactivate(Composer $composer, IOInterface $io)
-    {
-    }
+        if (!function_exists('getFoxlisGeoConfig')) {
+            return getFoxlisGeoConfig_default();
+        }
 
-    public function uninstall(Composer $composer, IOInterface $io)
-    {
+        return array_merge(getFoxlisGeoConfig_default(), getFoxlisGeoConfig());
     }
 }

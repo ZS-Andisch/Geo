@@ -12,44 +12,18 @@
     "minimum-stability": "dev",
     "require": {
         "php": ">=5.6.2",
-        "composer-plugin-api": "^2.0"
+        "composer-plugin-api": "^1.0 || ^2.0"
     },
     "require-dev": {
-        "composer/composer": "^2.0"
+        "composer/composer": "^1.0 || ^2.0"
     },
     "autoload": {
         "psr-4": {
             "Foxliscom\\Geo\\": "/src"
-        }
+        },
+        "files": ["src/Config/common.php"]
     },
     "extra": {
-        "class": "Foxliscom\\Geo\\FoxlisGeo",
-        "params": {
-            "foxlis_geo_field_session": true,
-            "foxlis_geo_field_bot_filter": true,
-            "foxlis_geo_field_protocol": "http",
-            "foxlis_geo_field_development_fake_ip_enable": false,
-            "foxlis_geo_field_development_fake_ip": "23.55.115.223",
-            "foxlis_geo_field_account": "",
-            "foxlis_geo_bots_list": [
-                "cncat",
-                "google",
-                "megaindex",
-                "openstat",
-                "vkshare",
-                "yadirectfetcher",
-                "yahoo",
-                "yandex",
-                "crawler",
-                "bot",
-                "rambler",
-                "spider",
-                "snoopy",
-                "finder",
-                "mail",
-                "wget",
-                "curl"
-            ]
-        }
+        "class": "Foxliscom\\Geo\\FoxlisGeo"
     }
 }
