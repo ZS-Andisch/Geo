@@ -10,7 +10,7 @@ use Foxliscom\Geo\Services\FoxlisGeoService;
 
 class FoxlisGeo implements PluginInterface
 {
-    private static $params = [];
+    private static $extra = [];
 
     public static function location()
     {
@@ -28,7 +28,7 @@ class FoxlisGeo implements PluginInterface
 
         if (empty($foxlisGeoService)) {
             $foxlisGeoService = new FoxlisGeoService(
-                self::$params
+                self::$extra['params']
             );
         }
 
@@ -37,7 +37,7 @@ class FoxlisGeo implements PluginInterface
 
     public function activate(Composer $composer, IOInterface $io)
     {
-        self::$params = $composer->getPackage()->getExtra()['params'];
+        self::$extra = $composer->getPackage()->getExtra();
     }
 
     public function deactivate(Composer $composer, IOInterface $io)
