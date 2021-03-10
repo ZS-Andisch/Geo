@@ -55,10 +55,10 @@ function getFoxlisGeoConfig()
 }
 ```
 
-* foxlis_geo_field_session - save result to user session.
-* foxlis_geo_field_bot_filter - don't detect geo-location for bots.
-* foxlis_geo_field_protocol - protocol "http" or "https".
-* foxlis_geo_field_development_fake_ip_enable - use fake ip for development.
-* foxlis_geo_field_development_fake_ip - fake ip value.
+* foxlis_geo_field_session - save result to user session `default true`.
+* foxlis_geo_field_bot_filter - don't detect geo-location for bots `default true`.
+* foxlis_geo_field_protocol - protocol "http" or "https" `default "http"`.
+* foxlis_geo_field_development_fake_ip_enable - use fake ip for development `default false`.
+* foxlis_geo_field_development_fake_ip - fake ip value `default "23.55.115.223"`.
 * foxlis_geo_field_account - [account key](https://foxlis.com/geo/activation) to get account info.
 * foxlis_geo_bots_list - bots list (for matching in the `$_SERVER['HTTP_USER_AGENT']`).

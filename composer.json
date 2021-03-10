@@ -1,6 +1,6 @@
 {
     "name": "foxliscom/geo",
-    "description": "Get user location by IP using Foxlis Geo API",
+    "description": "Get user location by IP using Foxlis Geo API: city, country, subdivisions, continent, etc",
     "type": "library",
     "license": "MIT",
     "authors": [
@@ -10,6 +10,17 @@
         }
     ],
     "minimum-stability": "dev",
+    "keywords": [
+        "geolocation",
+        "location",
+        "city",
+        "country",
+        "subdevisions",
+        "continent",
+        "ip location",
+        "foxlis",
+        "geo"
+    ],
     "require": {
         "php": ">=5.6.2"
     },
