@@ -9,7 +9,7 @@ Require `foxliscom/geo` using composer.
 ## Usage
 
 ```php
-use Foxlis\Geo\FoxlisGeo;
+use Foxliscom\Geo\FoxlisGeo;
 
 // Get City
 echo FoxlisGeo::location()->getCity();
