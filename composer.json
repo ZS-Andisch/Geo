@@ -23,9 +23,7 @@
         }
     },
     "extra": {
-        "class": {
-            "class": "Foxliscom\\Geo"
-        },
+        "class": "Foxliscom\\Geo",
         "params": {
             "foxlis_geo_field_session": true,
             "foxlis_geo_field_bot_filter": true,
