@@ -72,7 +72,7 @@ echo FoxlisGeo::location()->getCity()->zhCN;
 
 ## Configuration
 
-Declare a global function `getFoxlisGeoConfig` with params like in common config `src/Config/common.php`:
+If you need to configure this plug-in - declare a global function `getFoxlisGeoConfig` with params like in common config `src/Config/common.php`:
 
 ```php
 function getFoxlisGeoConfig()
@@ -82,7 +82,7 @@ function getFoxlisGeoConfig()
     ];
 }
 ```
-* foxlis_geo_field_language `default en`.
+* `foxlis_geo_field_language` - default language `default en`.
     * English `en`
     * Chinese `zh-CN`
     * French `fr`
@@ -91,10 +91,10 @@ function getFoxlisGeoConfig()
     * Spanish `es`
     * Japanese `ja`
     * Portuguese `pt-BR`
-* foxlis_geo_field_session - save result to user session `default true`.
-* foxlis_geo_field_bot_filter - don't detect geo-location for bots `default true`.
-* foxlis_geo_field_protocol - protocol "http" or "https" `default "http"`.
-* foxlis_geo_field_development_fake_ip_enable - use fake ip for development `default false`.
-* foxlis_geo_field_development_fake_ip - fake ip value `default "23.55.115.223"`.
-* foxlis_geo_field_account - [account key](https://foxlis.com/geo/activation) to get account info.
-* foxlis_geo_bots_list - bots list (for matching in the `$_SERVER['HTTP_USER_AGENT']`).
+* `foxlis_geo_field_session` - save result to user session `default true`.
+* `foxlis_geo_field_bot_filter` - don't detect geo-location for bots `default true`.
+* `foxlis_geo_field_protocol` - protocol "http" or "https" `default "http"`.
+* `foxlis_geo_field_development_fake_ip_enable` - use fake ip for development `default false`.
+* `foxlis_geo_field_development_fake_ip` - fake ip value `default "23.55.115.223"`.
+* `foxlis_geo_field_account` - [account key](https://foxlis.com/geo/activation) to get account info.
+* `foxlis_geo_bots_list` - bots list (for matching in the `$_SERVER['HTTP_USER_AGENT']`).
