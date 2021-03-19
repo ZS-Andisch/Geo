@@ -83,11 +83,17 @@ class FoxlisGeoService
             return $this->apiDataGeo;
         }
 
+        $requestGeoTimeout = isset($this->options['foxlis_geo_field_request_geo_timeout'])
+            ? $this->options['foxlis_geo_field_request_geo_timeout']
+            : '';
+
         $protocol = $this->options['foxlis_geo_field_protocol'];
 
         if (
         empty($content = @file_get_contents(
-            "{$protocol}://geo.foxlis.com/get-geo-by-ip/{$this->getVisitorIp()}"
+            "{$protocol}://geo.foxlis.com/get-geo-by-ip/{$this->getVisitorIp()}",
+            0,
+            stream_context_create(["http" => ["timeout" => $requestGeoTimeout]])
         ))
         ) {
             return [];
@@ -124,12 +130,20 @@ class FoxlisGeoService
             return $this->apiDataAccount;
         }
 
+        $requestAccountTimeout = isset($this->options['foxlis_geo_field_request_account_timeout'])
+            ? $this->options['foxlis_geo_field_request_account_timeout']
+            : '';
+
         $account = isset($this->options['foxlis_geo_field_account']) ? $this->options['foxlis_geo_field_account'] : '';
 
         if (
             empty($account)
             ||
-            empty($content = @file_get_contents("https://geo.foxlis.com/account/{$account}"))
+            empty($content = @file_get_contents(
+                "https://geo.foxlis.com/account/{$account}",
+                0,
+                stream_context_create(["http" => ["timeout" => $requestAccountTimeout]])
+            ))
         ) {
             return [];
         }

@@ -10,6 +10,10 @@ if (!function_exists('getFoxlisGeoConfig_default')) {
             'foxlis_geo_field_bot_filter' => true,
             'foxlis_geo_field_protocol' => 'http',
 
+            // Request Settings
+            'foxlis_geo_field_request_geo_timeout' => 1,
+            'foxlis_geo_field_request_account_timeout' => 3,
+
             // Development Settings
             'foxlis_geo_field_development_fake_ip_enable' => false,
             'foxlis_geo_field_development_fake_ip' => '23.55.115.223',
