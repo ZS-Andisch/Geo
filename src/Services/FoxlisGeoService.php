@@ -121,7 +121,16 @@ class FoxlisGeoService
                 : '';
         }
 
-        return $_SERVER['REMOTE_ADDR'];
+        $ipaddress = null;
+        if (!empty($_SERVER["HTTP_DO_CONNECTING_IP"])) {
+            $ipaddress = $_SERVER["HTTP_DO_CONNECTING_IP"];
+        } else if (!empty($_SERVER["HTTP_CF_CONNECTING_IP"])) {
+            $ipaddress = $_SERVER["HTTP_CF_CONNECTING_IP"];
+        } else if (!empty($_SERVER['REMOTE_ADDR'])) {
+            $ipaddress = $_SERVER['REMOTE_ADDR'];
+        }
+
+        return $ipaddress;
     }
 
     private function getAccountData()
