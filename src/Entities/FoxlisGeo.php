@@ -11,6 +11,7 @@ class FoxlisGeo
 
     private $city;
     private $country;
+    private $iso_code;
     private $continent;
     private $subdivisions;
     private $location;
@@ -19,6 +20,7 @@ class FoxlisGeo
     {
         $this->city = new FoxlisGeoCity($this);
         $this->country = new FoxlisGeoCountry($this);
+        $this->iso_code = new FoxlisGeoIsoCode($this);
         $this->continent = new FoxlisGeoContinent($this);
         $this->subdivisions = new FoxlisGeoSubdivisions($this);
         $this->location = new FoxlisGeoLocation($this);
@@ -58,6 +60,11 @@ class FoxlisGeo
     public function getCountry()
     {
         return $this->country;
+    }
+
+    public function getIsoCode()
+    {
+        return $this->iso_code;
     }
 
     public function getContinent()
